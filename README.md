@@ -35,6 +35,25 @@ npm run reset-project
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
+## Deploy to Vercel
+
+Import this GitHub repository into Vercel and set the Root Directory to the
+project root (`.`). The included `vercel.json` configures the web export command
+and its `dist` output directory.
+
+Set these environment variables in the Vercel project settings for each
+deployment environment:
+
+- `EXPO_PUBLIC_API_URL`
+- `EXPO_PUBLIC_SOCKET_URL`
+- `EXPO_PUBLIC_GRAPHQL_WS_URL`
+
+Use publicly reachable HTTPS/WSS backend URLs. The backend must allow requests
+from the deployed Vercel domain; a local or private-network backend URL will
+not be reachable by users of the deployed site.
+
+To verify the production export locally, run `npm run build:web`.
+
 ## Learn more
 
 To learn more about developing your project with Expo, look at the following resources:
